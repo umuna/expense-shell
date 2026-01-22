@@ -14,6 +14,6 @@ cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 
 # restart service
-systemctl restart nginx
+systemctl start nginx
 systemctl enable nginx
 
