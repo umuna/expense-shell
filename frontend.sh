@@ -1,7 +1,7 @@
 echo -e "\e[35mInstalling Nginx\e[0m"
 dnf install nginx -y
 
-echo -e "\e[35mCopy expense  config file"
+echo -e "\e[35mCopy expense  config file\e[0m"
 cp expense.conf /etc/nginx/default.d/expense.conf
 
 echo -e "\e[35mclean old content\e[0m"
@@ -15,6 +15,6 @@ echo -e "\e[35mextract content\e[0m"
 unzip /tmp/frontend.zip
 
 echo -e "\e[35mrestart service\e[0m"
-systemctl restart nginx
+systemctl start nginx
 systemctl enable nginx
 
