@@ -7,14 +7,14 @@ cp expense.conf /etc/nginx/default.d/expense.conf
 echo -e "\e[35mclean old content\e[0m"
 rm -rf /usr/share/nginx/html/*
 
-echo -e "\e[35download frontend content\e[0m"
+echo -e "\e[3535mcleandownload frontend content\e[0m"
 curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip
 cd /usr/share/nginx/html
 
-echo -e \e[35mextract content\e[0m"
+echo -e "\e[35mextract content\e[0m"
 unzip /tmp/frontend.zip
 
-echo -e "\e[35mextract service\e[0m"
+echo -e "\e[35mrestart service\e[0m"
 systemctl restart service
 systemctl enable nginx
 
