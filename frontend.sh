@@ -15,6 +15,6 @@ echo -e "\e[35mextract content\e[0m"
 unzip /tmp/frontend.zip
 
 echo -e "\e[35mrestart service\e[0m"
-systemctl restart service
+systemctl restart nginx
 systemctl enable nginx
 
