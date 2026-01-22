@@ -9,7 +9,7 @@ rm -rf /usr/share/nginx/html/*
 
 echo -e "\e[3535mcleandownload frontend content\e[0m"
 curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip
-cd  /usr/share/nginx/html
+cd /usr/share/nginx/html
 
 echo -e "\e[35mextract content\e[0m"
 unzip /tmp/frontend.zip
