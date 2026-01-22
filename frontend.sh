@@ -1,20 +1,19 @@
-echo -e "\e[35mInstalling Nginx\e[0m"
+# Install nginx
 dnf install nginx -y
-
-echo -e "\e[35mCopy expense  config file\e[0m"
+# copy expense config file
 cp expense.conf /etc/nginx/default.d/expense.conf
 
-echo -e "\e[35mclean old content\e[0m"
+# clean old content\e[0m"
 rm -rf /usr/share/nginx/html/*
 
-echo -e "\e[3535mcleandownload frontend content\e[0m"
+# download frontend content
 curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip
 cd /usr/share/nginx/html
 
-echo -e "\e[35mextract content\e[0m"
+# extract content
 unzip /tmp/frontend.zip
 
-echo -e "\e[35mrestart service\e[0m"
+# restart service
 systemctl restart nginx
 systemctl enable nginx
 
